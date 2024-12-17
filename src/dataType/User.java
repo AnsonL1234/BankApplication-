@@ -14,6 +14,18 @@ public class User {
 	private LocalDate dob;
 	private String gender;
 	
+	public User(Object o) {
+
+		this.userID = "";
+		this.password = "";
+		this.firstName = "";
+		this.lastName = "";
+		this.email = "";
+		this.phoneNumber = "";
+		this.dob = null;
+		this.gender = "";
+	}
+	
 	public User(String userID, String password, String firstName, String lastName, String email, String phoneNumber, LocalDate dob, String gender) {
 
 		this.userID = userID;
