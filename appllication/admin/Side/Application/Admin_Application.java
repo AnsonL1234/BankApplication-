@@ -30,7 +30,6 @@ public class Admin_Application extends JFrame{
 	
 	//variable for main center panel
 	private JTable center_Table;
-	private TableColumn tableColumn;
 	private DefaultTableModel center_Model;
 	
 	//defining the size of the window by X and Y
@@ -59,6 +58,24 @@ public class Admin_Application extends JFrame{
 		//defining the menu bar and call the method for main panel
 		main_Panel = main_Top_Panel();
 		main_Panel = main_Centre_Panel();
+		
+		//defining the button
+		JButton selectButton = null, updateButton = null;
+		updateButton = buttonAction(updateButton, "Update");
+		selectButton = buttonAction(selectButton, "Select");
+		
+		JPanel bottomPanel = new JPanel();
+		bottomPanel.setBackground(Application_Content.DARK_BLUE);
+		bottomPanel.setBorder(BorderFactory.createEmptyBorder(0,0,30,0));
+		
+		//add to the bottom panel of the windows
+		bottomPanel.add(updateButton);
+		bottomPanel.add(selectButton);
+		
+		//add to the main panel and locate in south position
+		main_Panel.add(bottomPanel, BorderLayout.SOUTH);
+		
+//		selectButton.addActionListener(this);
 		
 		//add it to the main window
 		this.add(main_Panel);
@@ -102,6 +119,11 @@ public class Admin_Application extends JFrame{
 		searchButton.setForeground(Application_Content.DARK_BLUE);
 //		searchButton.setBorder(BorderFactory.createLineBorder(Application_Content.ORANGE_50));
 		searchButton.setFont(new Font("MV Boli",~Font.BOLD,14));
+		
+		//adding action for the button
+//		registerButton.addActionListener((ActionListener) this);
+//		removeButton.addActionListener((ActionListener) this);
+//		searchButton.addActionListener((ActionListener) this);
 		
 		Box box = Box.createHorizontalBox();
 		box.add(registerButton);
@@ -183,7 +205,7 @@ public class Admin_Application extends JFrame{
 		center_Table = new JTable(center_Model);
 		
 		//resize the table
-		center_Table.setPreferredScrollableViewportSize(new Dimension(840,350));
+		center_Table.setPreferredScrollableViewportSize(new Dimension(830,350));
 		
 		//set the color for the border, header and row in table
 		center_Table.getTableHeader().setBackground(Application_Content.ORANGE_50);
@@ -227,7 +249,13 @@ public class Admin_Application extends JFrame{
 		return main_Panel;
 	}
 	
-	public static void main(String[] args) {
-		new Admin_Application();
+	private JButton buttonAction(JButton button, String value) {
+		button = new JButton(value);
+		button.setPreferredSize(new Dimension(115,40));
+		button.setBackground(Application_Content.ORANGE_50);
+		button.setForeground(Application_Content.DARK_BLUE);
+		button.setFont(new Font("MV Boli", Font.BOLD,16));
+//		button.addActionListener((ActionListener) this);
+		return button;
 	}
 }

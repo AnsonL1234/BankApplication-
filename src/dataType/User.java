@@ -14,7 +14,7 @@ public class User {
 	private LocalDate dob;
 	private String gender;
 	
-	public User(Object o) {
+	public User() {
 
 		this.userID = "";
 		this.password = "";
