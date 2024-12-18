@@ -56,9 +56,9 @@ public class UserManagementSystem {
 		String userID = "";
 		
 		do {
-			int givenId = (int)(Math.random() * 99999) + 1;
+			int givenId = (int)(Math.random() * 99999) + 100000;
 			userID = "S" + givenId;
-		} while (isUserExists(userID,userList));
+		} while (!isUserExists(userID,userList));
 		
 		return userID;
 	}

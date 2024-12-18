@@ -7,6 +7,9 @@ public class Application_Content {
 	public static final Color LIGHT_BLUE = Color.decode("#6cc8dd"); // panel color 
 	public static final Color ORANGE_50 = Color.decode("#ff8c1a");
 	public static final Color LIGHT_ORANGE = Color.decode("#ffdab3");
-	public static final Color ORANGE_60 = Color.decode("#ffdab3");
+	public static final Color ORANGE_60 = Color.decode("#ff8533");
 	public static final Color TEXT_COLOR = Color.decode("#d3eff0"); //text color
+	public static final Color BLUE_30 = Color.decode("#191e29");
+	public static final Color DEEP_BLUE = Color.decode("#132d46");
+	public static final Color GREEN = Color.decode("#01c38d");
 }

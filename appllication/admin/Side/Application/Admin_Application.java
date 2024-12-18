@@ -193,6 +193,7 @@ public class Admin_Application extends JFrame{
 	}
 	
 	private JPanel main_Centre_Panel() {
+		
 		//table header
 		String[] array_Header = {"User ID","First Name","Last Name","Email","Phone Number","DOB","Gender"}; 
 		
